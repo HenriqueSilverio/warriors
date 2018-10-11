@@ -4,9 +4,9 @@ Controle seu "clã de guerreiros" com cadastro de: tipo, especialidade, e outros
 
 ## Instalação
 
-O processo de instalação pode variar de acordo com seu ambiente.
+O processo de instalação pode variar de acordo com seu ambiente. Consulte os requisitos [aqui](https://laravel.com/docs/5.7/installation#server-requirements).
 
-Para facilitar, recomendamos que utilize o [Homestead](https://laravel.com/docs/5.6/homestead), uma VM padrão, que vem com todos softwares necessários configurados para você.
+Para facilitar, recomendamos que utilize o [Homestead](https://laravel.com/docs/5.7/homestead), uma VM padrão, que vem com todos softwares necessários configurados para você.
 
 Supondo que você já tem um servidor configurado com todos os requisitos necessários, de forma geral, basta seguir os seguintes passos:
 
@@ -30,7 +30,13 @@ cp .env.example .env
 php artisan migrate --seed
 ```
 
-**5.** Inicie o servidor:
+**5.** Crie um link simbólico para o [diretório público](https://laravel.com/docs/5.7/filesystem#the-public-disk) de uploads:
+
+```
+php artisan storage:link
+```
+
+**6.** Inicie o servidor:
 
 ```
 php artisan serve
